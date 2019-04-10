@@ -1,0 +1,52 @@
+.main-header {
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__inner {
+    height: 60px;
+    width: 80%;
+    .menu-icon {
+      display: none;
+    }
+  }
+  &__title {
+    float: left;
+    width: 200px;
+    color: #808080;
+    font-size: 50px;
+    font-family: Helvetica, Verdana, Arial, sans-serif;
+  }
+  &__function {
+    float: right;
+    li {
+      margin: 15px 20px 0 0;
+      font-family: Helvetica, Verdana, Arial, sans-serif;
+      list-style: none;
+      display: inline-block;
+      background: #C0C0C0;
+      padding: 7px;
+      border-radius: 5px;
+      }
+    }
+  }
+
+.header-login {
+  text-decoration: none;
+  color: #fff;
+}
+
+.header-logout {
+  text-decoration: none;
+  color: #fff;
+}
+
+.header-mypage {
+  text-decoration: none;
+  color: #fff;
+}
+
+.header-signup {
+  text-decoration: none;
+  color: #fff;
+}
