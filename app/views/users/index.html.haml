@@ -1,1 +1,20 @@
-%p Hello World!
+%header.main-header
+  %div.main-header__inner
+    %div.main-header__title
+      %h2 Receiver
+    %span.fa.fa-bars.menu-icon
+    %div.main-header__function
+      %ul.login-register
+      - if user_signed_in?
+        %li.header-mypage
+          マイページ
+        %li
+          = link_to destroy_user_session_path, method: :delete,class: "header-logout" do
+            ログアウト
+      - else
+        %li
+          = link_to new_user_session_path, class: "header-login" do
+            ログイン
+        %li
+          = link_to new_user_registration_path, class: "header-signup" do
+            新規会員登録
