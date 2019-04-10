@@ -62,3 +62,86 @@
     padding-top: 300px;
   }
 }
+
+.middle-container {
+  height: 150px;
+  &__textbox {
+    width: 800px;
+    font-size: 25px;
+    text-align: center;
+    margin: 40px auto 20px;
+    background: #FFCC33;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+  }
+  &__searchbox {
+    margin: 0 auto;
+    width: 800px;
+    position: relative;
+  }
+  &__input {
+    width: 100%;
+  }
+  &__searchbtn {
+    position: absolute;
+    top: 6px;
+    right: 2px;
+    font-size: 13px;
+    border-style: none;
+  }
+}
+
+.description {
+  height: 450px;
+  background: #EEEEEE;
+  position: relative;
+  .description-container {
+    max-width: 1100px;
+    height: 400px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right:0;
+    margin: auto;
+    &__imagebox {
+      background: image-url("map-image.png");
+      background-size: cover;
+      height: 250px;
+      width: 40%;
+      float: left;
+    }
+    &__textbox {
+      height: 350px;
+      width: 50%;
+      float: right;
+      &--title {
+        font-family: Helvetica, Verdana, Arial, sans-serif;
+        font-size: 40px;
+      }
+    }
+  }
+}
+
+.main-footer{
+  height: 250px;
+  background: #333333;
+  &__inner {
+    padding-top: 25px;
+    height: 200px;
+    color: #fff;
+    position: relative;
+    &--textbox {
+      position: absolute;
+      left: 150px;
+      top: 50px;
+    }
+    &--copyright {
+      width: 100%;
+      text-align: center;
+      position: absolute;
+      bottom: 0;
+      }
+    }
+  }
