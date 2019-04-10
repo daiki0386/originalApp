@@ -50,3 +50,15 @@
   text-decoration: none;
   color: #fff;
 }
+
+.main-container {
+  background: image-url("bench-accounting-49908-unsplash.jpg");
+  height: 500px;
+  background-size: cover;
+  .main-text {
+    text-align: center;
+    font-size: 50px;
+    color: #fff;
+    padding-top: 300px;
+  }
+}
