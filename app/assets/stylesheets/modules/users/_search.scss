@@ -1,0 +1,36 @@
+.search-result-container {
+  background: #EEEEEE;
+  width: 100%;
+  height: 800px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__inner {
+    width: 40%;
+    height: 650px;
+    background: #fff;
+    border-radius: 10px;
+  }
+  &__title {
+    text-align: center;
+    font-size: 24px;
+    padding-bottom: 20px;
+  }
+}
+
+.search-result {
+  &__user-box {
+    text-align: center;
+    border: solid #808080;
+    width: 80%;
+    margin: 10px auto;
+    border-radius: 5px;
+  }
+  &__request {
+    color: #fff;
+    background: #FFCC33;
+    width: 50%;
+    margin: 10px auto;
+    border-radius: 5px;
+  }
+}
