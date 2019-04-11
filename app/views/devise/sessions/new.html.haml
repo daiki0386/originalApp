@@ -1,12 +1,12 @@
-\.signin-container
-\.signin-container__main
-\%h2.signin-container__title Receiver
-\%div.signin-container__form
-\= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
-\.form-group
-\= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: " メールアドレス", class: "form-group__input"
-\.form-group
-\= f.password_field :password, autocomplete: "current-password", placeholder: " パスワード", class: "form-group__input"
-\.submit-group
-\= f.submit "ログイン", class: "submit-group__btn"
-\%small.copyright © 2019 Receiver
+.signin-container
+  .signin-container__main
+    %h2.signin-container__title Receiver
+    %div.signin-container__form
+      = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+        .form-group
+          = f.email_field :email, autofocus: true, autocomplete: "email", placeholder: " メールアドレス", class: "form-group__input"
+        .form-group
+          = f.password_field :password, autocomplete: "current-password", placeholder: " パスワード", class: "form-group__input"
+        .submit-group
+          = f.submit "ログイン", class: "submit-group__btn"
+    %small.copyright © 2019 Receiver
