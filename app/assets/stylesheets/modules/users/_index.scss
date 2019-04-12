@@ -6,8 +6,17 @@
   &__inner {
     height: 60px;
     width: 80%;
+    position: relative;
     .menu-icon {
       display: none;
+    }
+    .menu-list {
+      width: 100px;
+      height: 100px;
+      background: #fff;
+      position: absolute;
+      right: 0;
+      margin-top: 53px;
     }
   }
   &__title {
