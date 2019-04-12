@@ -6,8 +6,30 @@
   &__inner {
     height: 60px;
     width: 80%;
+    position: relative;
     .menu-icon {
       display: none;
+    }
+    .menu-list {
+      display: none;
+      width: 120px;
+      position: absolute;
+      right: 0;
+      margin-top: 53px;
+      background: #fff;
+      border-top: solid 1px #808080;
+      &__box {
+        background: #fff;
+        border-bottom: solid 1px #808080;
+        width: 100%;
+        text-align: center;
+        padding: 3px;
+      }
+      &__text {
+        font-size: 12px;
+        color: #808080;
+        text-decoration: none;
+      }
     }
   }
   &__title {
