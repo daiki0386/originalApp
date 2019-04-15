@@ -2,8 +2,7 @@
   %div.user-mypage-container__inner
     %h1.user-mypage-container__title #{@user.nickname}さんの MYPAGE
     = form_tag("/users/#{@user.id}/comments", method: :post) do
-      %textarea.comment-box{:cols => "40", :name => "kanso", :rows => "4"}
-        メッセージを入力
+      %textarea.comment-box{:cols => "40", :name => "text",:placeholder => "メッセージを入力",:rows => "4"}
       %button{class: "user-mypage-container__submit",:type => "submit"}
         SEND
     %div.comment-container
