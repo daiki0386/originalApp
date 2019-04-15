@@ -1,12 +1,12 @@
 .user-mypage-container {
   background: #EEEEEE;
-  width: 100%;
+  // width: 100%;
   height: 800px;
   display: flex;
   justify-content: center;
   align-items: center;
   &__inner {
-    width: 40%;
+    width: 70%;
     height: 650px;
     background: #fff;
     border-radius: 10px;
@@ -16,19 +16,24 @@
     font-size: 24px;
     padding-bottom: 20px;
   }
-  &__comment-box {
-    height: 50px;
-    width: 60%;
-    border: solid 1px;
-    margin: 0 auto;
-  }
   &__submit {
     height: 40px;
     width: 60%;
     background: #FFCC33;
     border-radius: 20px;
     margin: 15px auto;
+    color: #fff;
+    display: block;
+    font-size: 14px;
   }
+}
+
+.comment-box {
+  display: block;
+  margin: 0 auto;
+  width: 60%;
+  height: 100px;
+  color: #808080;
 }
 
 .comment-container {
@@ -36,4 +41,8 @@
   height: 400px;
   border: solid 1px;
   margin: 0 auto;
+  &__comments {
+    height: 350px;
+    overflow: auto;
+  }
 }
