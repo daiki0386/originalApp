@@ -6,7 +6,8 @@
     %ul.menu-list
       - if user_signed_in?
         %li.menu-list__box
-          マイページ
+          = link_to user_path(current_user.id), class: "menu-list__text" do
+            マイページ
         %li.menu-list__box
           = link_to destroy_user_session_path, method: :delete,class: "menu-list__text" do
             ログアウト
@@ -20,8 +21,9 @@
     %div.main-header__function
       %ul.login-register
       - if user_signed_in?
-        %li.header-mypage
-          マイページ
+        %li
+          = link_to user_path(current_user.id), class: "header-mypage" do
+            マイページ
         %li
           = link_to destroy_user_session_path, method: :delete,class: "header-logout" do
             ログアウト
