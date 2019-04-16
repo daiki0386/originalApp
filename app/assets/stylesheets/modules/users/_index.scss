@@ -147,6 +147,64 @@
   }
 }
 
+.view-more {
+  margin: 10px auto;
+  width: 40%;
+  border: solid 1px;
+  padding: 10px;
+  text-align: center;
+}
+
+.sub-description {
+  display: none;
+  height: 450px;
+  background: #fff;
+  position: relative;
+  color: #008080;
+  &__title {
+    text-align: center;
+    border-top: dashed 2px;
+    border-bottom: dashed 2px;
+    width: 30%;
+    margin: 40px auto;
+    padding: 10px;
+  }
+  &__illust-container {
+    margin: 0 auto;
+    max-width: 1000px;
+  }
+  &__stepbox {
+    display: inline-block;
+    margin: 0 10px;
+    height: 350px;
+    width: 30%;
+    &--title {
+      text-align: center;
+      padding-bottom: 10px;
+      font-weight: bold;
+    }
+  }
+}
+
+.illustbox1 {
+  background: image-url("search-user.jpg");
+  height: 200px;
+  background-size: cover;
+  margin-bottom: 20px;
+}
+.illustbox2 {
+  background: image-url("reply.jpg");
+  height: 200px;
+  background-size: cover;
+  margin-bottom: 20px;
+}
+.illustbox3 {
+  background: image-url("shake-hand.jpg");
+  height: 200px;
+  background-size: cover;
+  margin-bottom: 20px;
+}
+
 .main-footer{
   height: 250px;
   background: #333333;
