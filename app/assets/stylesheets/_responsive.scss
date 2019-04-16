@@ -15,7 +15,7 @@
     }
   }
   .description {
-    height: 720px;
+    height: 750px;
     .description-container {
       position: static;
       padding-top: 20px;
@@ -30,6 +30,17 @@
           padding-top: 20px;
           margin: 0 auto;
       }
+    }
+  }
+  .sub-description {
+    height: 1200px;
+    &__title {
+      width: 60%;
+    }
+    &__stepbox {
+    width: 40%;
+    display: block;
+    margin: 0 auto;
     }
   }
 }
@@ -98,6 +109,14 @@
         text-align: center;
         position: static;
       }
+    }
+  }
+  .sub-description {
+    &__title {
+      width: 90%;
+    }
+    &__stepbox {
+      width: 350px;
     }
   }
 }
