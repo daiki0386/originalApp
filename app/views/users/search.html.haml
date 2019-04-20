@@ -1,0 +1,15 @@
+= render 'shared/header'
+
+.search-result-container
+  %div.search-result-container__inner
+    %h1.search-result-container__title 検索結果#{@users.length}件
+    %div.search-result-container__users
+      - @users.each do |user|
+        %div.search-result__user-box
+          %h3.search-result__user-name
+            = user.nickname
+          %h3.search-result__user-address
+            = user.address
+          %div.search-result__request
+            = link_to user_path(user), class: "search-result__request" do
+              %div この人に依頼する

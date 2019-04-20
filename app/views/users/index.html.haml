@@ -1,30 +1,21 @@
-%header.main-header
-  %div.main-header__inner
-    %div.main-header__title
-      %h2 Receiver
-    %span.fa.fa-bars.menu-icon
-    %div.main-header__function
-      %ul.login-register
-      - if user_signed_in?
-        %li.header-mypage
-          マイページ
-        %li
-          = link_to destroy_user_session_path, method: :delete,class: "header-logout" do
-            ログアウト
-      - else
-        %li
-          = link_to new_user_session_path, class: "header-login" do
-            ログイン
-        %li
-          = link_to new_user_registration_path, class: "header-signup" do
-            新規会員登録
+= render 'shared/header'
 
 %section.main-container
   %h1.main-text 欲しい時に、受け取ろう
 
-%section.middle-container
-  %div.middle-container__textbox
-    %h3 近くのReceiverを探す
+- if user_signed_in?
+  %section.middle-container
+    %div.middle-container__textbox
+      %h3 近くのReceiverを探す
+    = form_tag(users_search_path, method: :get,class: "middle-container__searchbox") do
+      = text_field_tag :search, '', class: 'middle-container__input', placeholder: ' 郵便番号を入力'
+      %button{class: "middle-container__searchbtn",:type => "submit"}
+        %i.fas.fa-search
+- else
+  %section.middle-container
+    = link_to new_user_registration_path, class: "middle-container__textbox" do
+      %div.middle-container__textbox
+        %h3 近くのReceiverを探す
 
 %section.description
   %div.description-container
@@ -38,6 +29,26 @@
       %p そんな想いを実現できるのが、このReceiverです。
       %p まずは自分の家の近くで登録されているReceiverを探します。
       %p あとは登録されれている人と、受け取り日時などのやり取りをして荷物を受け取って完了です。
+      %div.view-more view more >>
+
+%section.sub-description
+  %div.sub-description__title
+    %h1 使い方は「ユーザー登録」から簡単3step!
+  %div.sub-description__illust-container
+    %div.sub-description__stepbox
+      %div.sub-description__stepbox--title step1
+      %div.illustbox1
+      %p ・近くのユーザーを検索し、メッセージを送信
+    %div.sub-description__stepbox
+      %div.sub-description__stepbox--title step2
+      %div.illustbox2
+      %p ・ユーザーは予定に合わせて返答
+      %br
+    %div.sub-description__stepbox
+      %div.sub-description__stepbox--title step3
+      %div.illustbox3
+      %p ・荷物を受け取り
+      %br
 
 %footer.main-footer
   %div.main-footer__inner
