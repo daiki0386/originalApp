@@ -2,16 +2,29 @@
 
 .user-mypage-container
   %div.user-mypage-container__inner
-    %h1.user-mypage-container__title メッセージ確認
+    %h1.user-mypage-container__title
     = render 'comments/comment_form', {from_user: current_user, to_user: @user, room_id: @room_id}
     %div.comment-container
       %h1.comment-container__title <メッセージ一覧>
       %div.comment-container__comments
         - if @comments
           - @comments.each do |comment|
-            %p
-            = comment.user.nickname
-            ：
-            = comment.text
-            %br
-            = comment.created_at.strftime("%Y/%m/%d %H:%M")
+            - if comment.from_id != current_user.id
+              %div.receive-comment
+                %p
+                = comment.user.nickname
+                ：
+                = comment.text
+                %br
+                = comment.created_at.strftime("%Y/%m/%d %H:%M")
+              %br
+            - else
+              %div.comment-right
+                %div.send-comment
+                  %p
+                  = comment.user.nickname
+                  ：
+                  = comment.text
+                  %br
+                  = comment.created_at.strftime("%Y/%m/%d %H:%M")
+                %br

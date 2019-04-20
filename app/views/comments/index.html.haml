@@ -10,7 +10,8 @@
             - if comment.from_id != current_user.id
               %div.receive-comment
                 %p
-                = comment.user.nickname
+                = link_to user_path(comment.from_id) do
+                  = comment.user.nickname
                 ：
                 = comment.text
                 %br
