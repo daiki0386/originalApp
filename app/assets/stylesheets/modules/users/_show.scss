@@ -1,0 +1,52 @@
+.user-mypage-container {
+  background: #EEEEEE;
+  height: 800px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__inner {
+    width: 70%;
+    height: 650px;
+    background: #fff;
+    border-radius: 10px;
+  }
+  &__title {
+    text-align: center;
+    font-size: 24px;
+    padding-bottom: 20px;
+  }
+  &__submit {
+    height: 40px;
+    width: 60%;
+    background: #FFCC33;
+    border-radius: 20px;
+    margin: 15px auto;
+    color: #fff;
+    display: block;
+    font-size: 14px;
+  }
+}
+
+.comment-box {
+  display: block;
+  margin: 0 auto;
+  width: 60%;
+  height: 100px;
+  color: #808080;
+}
+
+.comment-container {
+  width: 70%;
+  height: 400px;
+  margin: 0 auto;
+  &__title {
+    padding-bottom: 30px;
+    text-align: center;
+    padding-top: 10px;
+    font-size: 20px;
+  }
+  &__comments {
+    height: 350px;
+    overflow: auto;
+  }
+}

@@ -1,0 +1,38 @@
+%header.main-header
+  %div.main-header__inner
+    = link_to root_path do
+      %div.main-header__title
+        %h2 Receiver
+    %span.fa.fa-bars.menu-icon
+    %ul.menu-list
+      - if user_signed_in?
+        %li.menu-list__box
+          = link_to comments_index_path, class: "menu-list__text" do
+            メッセージ確認
+        %li.menu-list__box
+          = link_to destroy_user_session_path, method: :delete,class: "menu-list__text" do
+            ログアウト
+      - else
+        %li.menu-list__box
+          = link_to new_user_session_path, class: "menu-list__text" do
+            ログイン
+        %li.menu-list__box
+          = link_to new_user_registration_path, class: "menu-list__text" do
+            新規会員登録
+    %div.main-header__function
+      %ul.login-register
+      - if user_signed_in?
+        %li
+          = link_to comments_index_path, class: "header-mypage" do
+            メッセージ確認
+        %li
+          = link_to destroy_user_session_path, method: :delete,class: "header-logout" do
+            ログアウト
+        %p ようこそ #{current_user.nickname} さん
+      - else
+        %li
+          = link_to new_user_session_path, class: "header-login" do
+            ログイン
+        %li
+          = link_to new_user_registration_path, class: "header-signup" do
+            新規会員登録

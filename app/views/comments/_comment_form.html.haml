@@ -1,0 +1,8 @@
+= form_tag('/comments', method: :post) do
+  %textarea.comment-box{:cols => "40", :name => "text",:placeholder => "メッセージを入力",:rows => "4"}
+  %input{:name => "user_id", :type => "hidden", :value => from_user.id}/
+  %input{:name => "from_id", :type => "hidden", :value => from_user.id}/
+  %input{:name => "to_id", :type => "hidden", :value => @user.id}/
+  %input{:name => "room_id", :type => "hidden", :value => @room_id}/
+  %button{class: "user-mypage-container__submit",:type => "submit"}
+    #{to_user.nickname} さんへ送信
