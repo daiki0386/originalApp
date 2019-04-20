@@ -12,4 +12,8 @@ class User < ApplicationRecord
   has_many :sent_comments, through: :from_comments, source: :from
   has_many :received_comments, through: :to_comments, source: :to
 
+  validates :nickname, presence: true
+  validates :address, presence: true
+  validates :postcode, presence: true
+
 end

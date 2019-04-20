@@ -5,6 +5,9 @@
     %h2.signin-container__title Receiver
     %div.signin-container__form
       = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+        - if resource.errors.any?
+          .new-registration-error-messages
+            正しく入力してください
         .form-group
           = f.text_field :nickname, autofocus: true, autocomplete: "nickname", placeholder: " 氏名", class: "form-group__input"
         .form-group
