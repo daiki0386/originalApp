@@ -16,6 +16,10 @@
     font-size: 24px;
     padding-bottom: 20px;
   }
+  &__users {
+    overflow: auto;
+    height: 550px;
+  }
 }
 
 .search-result {
