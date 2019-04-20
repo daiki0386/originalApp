@@ -1,8 +1,7 @@
 class CommentsController < ApplicationController
 
   def index
-    @receive = Comment.where(to_id: current_user)
-    @send = Comment.where(from_id: current_user)
+    @allcomments = Comment.where(to_id: current_user).or(Comment.where(from_id: current_user))
   end
 
   def create

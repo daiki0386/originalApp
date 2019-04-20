@@ -5,20 +5,10 @@
     %div.comment-container
       %h1.comment-container__title <メッセージ一覧>
       %div.mypage-comment-container
-        - if @receive
-          - @receive.each do |comment|
-            %div.receive-comment
-              %p
-              = comment.user.nickname
-              ：
-              = comment.text
-              %br
-              = comment.created_at.strftime("%Y/%m/%d %H:%M")
-            %br
-        - if @send
-          - @send.each do |comment|
-            %div.comment-right
-              %div.send-comment
+        - if @allcomments
+          - @allcomments.each do |comment|
+            - if comment.from_id != current_user.id
+              %div.receive-comment
                 %p
                 = comment.user.nickname
                 ：
@@ -26,3 +16,13 @@
                 %br
                 = comment.created_at.strftime("%Y/%m/%d %H:%M")
               %br
+            - else
+              %div.comment-right
+                %div.send-comment
+                  %p
+                  = comment.user.nickname
+                  ：
+                  = comment.text
+                  %br
+                  = comment.created_at.strftime("%Y/%m/%d %H:%M")
+                %br
