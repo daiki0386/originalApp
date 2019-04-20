@@ -5,8 +5,8 @@
     %div.comment-container
       %h1.comment-container__title <メッセージ一覧>
       %div.comment-container__comments
-        - if @allcomments
-          - @allcomments.each do |comment|
+        - if @receive
+          - @receive.each do |comment|
             %p
             = comment.user.nickname
             ：
