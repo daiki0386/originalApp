@@ -21,7 +21,7 @@ class UsersController < ApplicationController
   end
 
   def search
-    @users = User.where('postcode LIKE(?)', "%#{params[:search]}%")
+    @users = User.where('postcode LIKE(?)', "%#{params[:search]}%").where.not(id: current_user)
   end
 
 end
