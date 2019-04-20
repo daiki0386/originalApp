@@ -1,0 +1,26 @@
+.mypage-comment-container {
+  height: 500px;
+  overflow: auto;
+}
+
+.receive-comment {
+  display: inline-block;
+  background: #EEEEEE;
+  text-align: left;
+  margin: 5px;
+  border-radius: 7px;
+  padding: 5px;
+}
+
+.comment-right {
+  text-align: right;
+}
+
+.send-comment {
+  display: inline-block;
+  background: #00FF00;
+  text-align: left;
+  margin: 5px 5px 5px auto;
+  border-radius: 7px;
+  padding: 5px;
+}
