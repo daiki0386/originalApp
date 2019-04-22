@@ -119,4 +119,12 @@
       width: 350px;
     }
   }
+  .user-mypage-container {
+    &__inner {
+      width: 90%;
+    }
+  }
+  .comment-container {
+    width: 90%;
+  }
 }
