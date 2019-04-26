@@ -1,8 +1,7 @@
 %header.main-header
   %div.main-header__inner
-    = link_to root_path do
-      %div.main-header__title
-        %h2 Receiver
+    = link_to root_path, class: "main-header__title" do
+      %h2 Receiver
     - if user_signed_in?
       %span.fa.fa-bars.menu-icon
       %ul.menu-list
@@ -26,15 +25,19 @@
       - if user_signed_in?
         %li
           = link_to comments_index_path, class: "header-mypage" do
-            メッセージ確認
+            MESSAGES
+            %br メッセージ
         %li
           = link_to destroy_user_session_path, method: :delete,class: "header-logout" do
-            ログアウト
+            SIGN-OUT
+            %br ログアウト
         %p ようこそ #{current_user.nickname} さん
       - else
         %li
           = link_to new_user_session_path, class: "header-login" do
-            ログイン
+            SIGN-IN
+            %br ログイン
         %li
           = link_to new_user_registration_path, class: "header-signup" do
-            新規会員登録
+            SIGN-UP
+            %br 新規会員登録

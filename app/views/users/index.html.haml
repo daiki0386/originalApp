@@ -1,10 +1,12 @@
-= render 'shared/header'
-
 %section.main-container
+  = render 'shared/header'
   %h1.main-text 欲しい時に、受け取ろう
+  %div.scroll-down
+    %p.scroll-down__title SCROLL
+    %i.fas.fa-angle-double-down
 
 - if user_signed_in?
-  %section.middle-container
+  %section.middle-container.scroll
     %div.middle-container__textbox
       %h3 近くのReceiverを探す
     = form_tag(users_search_path, method: :get,class: "middle-container__searchbox") do
@@ -12,12 +14,12 @@
       %button{class: "middle-container__searchbtn",:type => "submit"}
         %i.fas.fa-search
 - else
-  %section.middle-container
+  %section.middle-container.scroll
     = link_to new_user_registration_path, class: "middle-container__textbox" do
       %div.middle-container__textbox
         %h3 近くのReceiverを探す
 
-%section.description
+%section.description.scroll
   %div.description-container
     %div.description-container__imagebox
     %div.description-container__textbox

@@ -3,11 +3,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  border-bottom: solid 1px rgba(255,255,255,.4);
   &__inner {
     height: 70px;
     width: 80%;
     position: relative;
-    color: #008080;
+    color: #FFCC33;
     .menu-icon {
       display: none;
     }
@@ -34,10 +35,11 @@
     }
   }
   &__title {
+    color: #fff;
     float: left;
     width: 200px;
-    color: #808080;
     font-size: 50px;
+    text-decoration: none;
     font-family: Helvetica, Verdana, Arial, sans-serif;
   }
   &__function {
@@ -47,7 +49,6 @@
       font-family: Helvetica, Verdana, Arial, sans-serif;
       list-style: none;
       display: inline-block;
-      background: #C0C0C0;
       padding: 7px;
       border-radius: 5px;
       }
@@ -74,17 +75,30 @@
   color: #fff;
 }
 
+.scroll-down {
+  text-align: center;
+  color: rgba(255,255,255,.8);
+  font-size: 30px;
+  padding-top: 100px;
+  &__title {
+    font-size: 14px;
+  }
+}
+
 .main-container {
   background: image-url("bench-accounting-49908-unsplash.jpg");
-  height: 500px;
+  height: 100vh;
   background-size: cover;
+  filter: contrast(80%);
+  filter: brightness(90%);
   .main-text {
     text-align: center;
     font-size: 50px;
     color: #fff;
-    padding-top: 300px;
+    padding-top: 400px;
   }
 }
+
 
 .middle-container {
   height: 150px;
@@ -227,3 +241,14 @@
       }
     }
   }
+
+.scroll {
+  opacity: 0;
+  transform : translate(0, 50px);
+  transition : all 2000ms;
+}
+
+.scroll.scrollin{
+  opacity: 1;
+  transform: translate(0, 0);
+}
